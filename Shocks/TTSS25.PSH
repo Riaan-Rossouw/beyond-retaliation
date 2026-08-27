@@ -1,0 +1,23 @@
+! Scenario 1: USA tariff shock. Period 2025.
+
+!======================================================================
+! USA reciprocal tariff on South African goods
+!======================================================================
+! Statutory rate 30%, scaled by the trade-weighted share of
+! non-exempt products in each sector's exports to the USA.
+! Reciprocal duties apply IN ADDITION to pre-existing rates,
+! so the shock is an increment over the base rate.
+! shock = 100 * [(1+t_new)/(1+t_old) - 1]
+!======================================================================
+
+shock tms("GrainCrop","ZAF","USA") =  30.0000 ; ! base  0.000%, exempt 0%, +30.0pp
+shock tms("LiveMeat","ZAF","USA") =  30.0000 ; ! base  0.000%, exempt 0%, +30.0pp
+shock tms("OthAgFood","ZAF","USA") =  28.2433 ; ! base  4.096%, exempt 2%, +29.4pp
+! shock tms("Coal","ZAF","USA") = 0; ! fully exempt (base 0.000%)
+shock tms("Mining","ZAF","USA") =   3.9000 ; ! base  0.000%, exempt 87%, +3.9pp
+shock tms("Metals","ZAF","USA") =  14.9976 ; ! base  0.016%, exempt 50%, +15.0pp
+shock tms("Auto","ZAF","USA") =  30.0000 ; ! base  0.000%, exempt 0%, +30.0pp
+shock tms("MachEquip","ZAF","USA") =  27.6000 ; ! base  0.000%, exempt 8%, +27.6pp
+shock tms("ChemPlast","ZAF","USA") =  23.9634 ; ! base  0.153%, exempt 20%, +24.0pp
+shock tms("TexApp","ZAF","USA") =  29.2175 ; ! base  2.678%, exempt 0%, +30.0pp
+shock tms("OthManuf","ZAF","USA") =  28.4999 ; ! base  0.000%, exempt 5%, +28.5pp

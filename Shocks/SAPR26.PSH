@@ -1,0 +1,81 @@
+! Scenario 2: SA policy response. Period 2026.
+
+!======================================================================
+! Real exchange rate adjustment -- step 1 of 5
+!======================================================================
+! Trade-balance-to-income RATIO raised by +0.00030 per year
+! over 2026-2030, i.e. +0.00150 cumulatively
+! (+0.150 percentage points of regional income).
+! Calibrated to deliver a 0.10% cumulative real
+! depreciation -- the minimum sufficient to offset the aggregate
+! impact of the USA tariff shock.
+! Requires Swap dpsave("ZAF") = DTBALR("ZAF") in the closure.
+! The real depreciation is the model's ENDOGENOUS response to this,
+! not an imposed price.  Read it off pfactor(ZAF) minus pfactwld.
+! 
+! MUST be 'ashock': DTBALR is exogenous under POL2/POL3, so RunDynam
+! also writes a base-case shock for it.  'shock' would specify the
+! same component twice and GEMPACK would stop.
+! 
+! CALIBRATE this value - see README section 6.
+!======================================================================
+
+ashock DTBALR("ZAF") =   0.00030 ;
+
+!======================================================================
+! South African import tariffs -- step 1 of 5
+!======================================================================
+! Applied rates cut to 90% of their initial level.
+! 'uniform -50' on tms is NOT equivalent to halving the tariff RATE:
+! it halves the POWER (1+t), driving every rate to about -50%, i.e.
+! an import subsidy.  Shocks are therefore element-specific.
+!======================================================================
+
+shock tms("GrainCrop","USA","ZAF") =  -0.2704 ; !   2.779% ->   2.501%
+shock tms("GrainCrop","CHN","ZAF") =  -0.3840 ; !   3.993% ->   3.594%
+shock tms("GrainCrop","ROW","ZAF") =  -0.4764 ; !   5.002% ->   4.502%
+shock tms("LiveMeat","USA","ZAF") =  -1.0954 ; !  12.302% ->  11.071%
+shock tms("LiveMeat","CHN","ZAF") =  -0.2714 ; !   2.790% ->   2.511%
+shock tms("LiveMeat","EU27","ZAF") =  -0.1154 ; !   1.167% ->   1.051%
+shock tms("LiveMeat","GBR","ZAF") =  -0.0841 ; !   0.848% ->   0.764%
+shock tms("LiveMeat","ROW","ZAF") =  -0.9212 ; !  10.147% ->   9.133%
+shock tms("OthAgFood","USA","ZAF") =  -0.6031 ; !   6.418% ->   5.776%
+shock tms("OthAgFood","SACUSADC","ZAF") =  -0.0010 ; !   0.010% ->   0.009%
+shock tms("OthAgFood","CHN","ZAF") =  -0.5848 ; !   6.212% ->   5.590%
+shock tms("OthAgFood","EU27","ZAF") =  -0.0861 ; !   0.868% ->   0.781%
+shock tms("OthAgFood","GBR","ZAF") =  -0.0497 ; !   0.500% ->   0.450%
+shock tms("OthAgFood","ROW","ZAF") =  -0.5755 ; !   6.107% ->   5.496%
+shock tms("Mining","USA","ZAF") =  -0.0021 ; !   0.021% ->   0.019%
+shock tms("Mining","CHN","ZAF") =  -0.0003 ; !   0.003% ->   0.003%
+shock tms("Mining","ROW","ZAF") =  -0.0000 ; !   0.000% ->   0.000%
+shock tms("Metals","USA","ZAF") =  -0.2564 ; !   2.632% ->   2.369%
+shock tms("Metals","CHN","ZAF") =  -0.7205 ; !   7.764% ->   6.988%
+shock tms("Metals","EU27","ZAF") =  -0.0124 ; !   0.124% ->   0.112%
+shock tms("Metals","GBR","ZAF") =  -0.0253 ; !   0.254% ->   0.229%
+shock tms("Metals","ROW","ZAF") =  -0.3222 ; !   3.329% ->   2.996%
+shock tms("Auto","USA","ZAF") =  -1.4221 ; !  16.579% ->  14.921%
+shock tms("Auto","CHN","ZAF") =  -1.2595 ; !  14.409% ->  12.968%
+shock tms("Auto","EU27","ZAF") =  -0.7671 ; !   8.309% ->   7.478%
+shock tms("Auto","GBR","ZAF") =  -0.8680 ; !   9.505% ->   8.554%
+shock tms("Auto","ROW","ZAF") =  -1.5823 ; !  18.797% ->  16.917%
+shock tms("MachEquip","USA","ZAF") =  -0.1866 ; !   1.901% ->   1.711%
+shock tms("MachEquip","CHN","ZAF") =  -0.3565 ; !   3.697% ->   3.327%
+shock tms("MachEquip","EU27","ZAF") =  -0.0140 ; !   0.140% ->   0.126%
+shock tms("MachEquip","GBR","ZAF") =  -0.0225 ; !   0.226% ->   0.203%
+shock tms("MachEquip","ROW","ZAF") =  -0.2024 ; !   2.066% ->   1.859%
+shock tms("ChemPlast","USA","ZAF") =  -0.3851 ; !   4.005% ->   3.605%
+shock tms("ChemPlast","CHN","ZAF") =  -0.6238 ; !   6.653% ->   5.987%
+shock tms("ChemPlast","EU27","ZAF") =  -0.0616 ; !   0.620% ->   0.558%
+shock tms("ChemPlast","GBR","ZAF") =  -0.0162 ; !   0.163% ->   0.146%
+shock tms("ChemPlast","ROW","ZAF") =  -0.3220 ; !   3.327% ->   2.995%
+shock tms("TexApp","USA","ZAF") =  -1.4600 ; !  17.096% ->  15.386%
+shock tms("TexApp","SACUSADC","ZAF") =  -0.0000 ; !   0.000% ->   0.000%
+shock tms("TexApp","CHN","ZAF") =  -2.3829 ; !  31.284% ->  28.156%
+shock tms("TexApp","EU27","ZAF") =  -1.2203 ; !  13.899% ->  12.509%
+shock tms("TexApp","GBR","ZAF") =  -1.2831 ; !  14.720% ->  13.248%
+shock tms("TexApp","ROW","ZAF") =  -1.8679 ; !  22.969% ->  20.672%
+shock tms("OthManuf","USA","ZAF") =  -0.3233 ; !   3.341% ->   3.007%
+shock tms("OthManuf","CHN","ZAF") =  -0.6009 ; !   6.393% ->   5.754%
+shock tms("OthManuf","EU27","ZAF") =  -0.1182 ; !   1.196% ->   1.077%
+shock tms("OthManuf","GBR","ZAF") =  -0.1481 ; !   1.503% ->   1.353%
+shock tms("OthManuf","ROW","ZAF") =  -0.3292 ; !   3.405% ->   3.064%

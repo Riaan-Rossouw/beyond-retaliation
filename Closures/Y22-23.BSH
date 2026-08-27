@@ -1,0 +1,50 @@
+! Baseline simulation shock file for 2023
+! Data based on IMF WEO April 2025 Release
+! Aggregations and calculations by the model.
+
+! Real GDP Growth Rate (%)
+Shock qgdp("ZAF") = 0.61;
+Shock qgdp("USA") = 2.50;
+Shock qgdp("SACUSADC") = 2.11;
+Shock qgdp("CHN") = 5.22;
+Shock qgdp("EU27") = 0.44;
+Shock qgdp("GBR") = 0.15;
+Shock qgdp("ROW") = 3.51;
+
+! Population Growth Rate (%)
+Shock pop("ZAF") = 1.19;
+Shock pop("USA") = 0.47;
+Shock pop("SACUSADC") = 1.79;
+Shock pop("CHN") = -0.15;
+Shock pop("EU27") = 0.26;
+Shock pop("GBR") = 0.34;
+Shock pop("ROW") = 0.92;
+
+! Unskilled Labour Growth Rate (%) - Assumed equal to Population Growth
+Shock qfactsup("UnSkLab","ZAF") = 1.19;
+Shock qfactsup("UnSkLab","USA") = 0.47;
+Shock qfactsup("UnSkLab","SACUSADC") = 1.79;
+Shock qfactsup("UnSkLab","CHN") = -0.15;
+Shock qfactsup("UnSkLab","EU27") = 0.26;
+Shock qfactsup("UnSkLab","GBR") = 0.34;
+Shock qfactsup("UnSkLab","ROW") = 0.92;
+
+! Skilled Labour Growth Rate (%) - Assumed equal to Population Growth
+Shock qfactsup("SkLab","ZAF") = 1.19;
+Shock qfactsup("SkLab","USA") = 0.47;
+Shock qfactsup("SkLab","SACUSADC") = 1.79;
+Shock qfactsup("SkLab","CHN") = -0.15;
+Shock qfactsup("SkLab","EU27") = 0.26;
+Shock qfactsup("SkLab","GBR") = 0.34;
+Shock qfactsup("SkLab","ROW") = 0.92;
+
+! Investment Growth Rate (%)
+Shock sqcgdsreg("ZAF") = -1.13;
+Shock sqcgdsreg("USA") = 2.22;
+Shock sqcgdsreg("SACUSADC") = 0.89;
+Shock sqcgdsreg("CHN") = 3.20;
+Shock sqcgdsreg("EU27") = 0.76;
+Shock sqcgdsreg("GBR") = -1.79;
+Shock sqcgdsreg("ROW") = 4.11;
+
+Shock time = 1 ;

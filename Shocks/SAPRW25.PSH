@@ -1,0 +1,95 @@
+! Scenario 4: SA policy response + world response. Period 2025.
+
+!======================================================================
+! USA reciprocal tariff on South African goods
+!======================================================================
+! Statutory rate 30%, scaled by the trade-weighted share of
+! non-exempt products in each sector's exports to the USA.
+! Reciprocal duties apply IN ADDITION to pre-existing rates,
+! so the shock is an increment over the base rate.
+! shock = 100 * [(1+t_new)/(1+t_old) - 1]
+!======================================================================
+
+shock tms("GrainCrop","ZAF","USA") =  30.0000 ; ! base  0.000%, exempt 0%, +30.0pp
+shock tms("LiveMeat","ZAF","USA") =  30.0000 ; ! base  0.000%, exempt 0%, +30.0pp
+shock tms("OthAgFood","ZAF","USA") =  28.2433 ; ! base  4.096%, exempt 2%, +29.4pp
+! shock tms("Coal","ZAF","USA") = 0; ! fully exempt (base 0.000%)
+shock tms("Mining","ZAF","USA") =   3.9000 ; ! base  0.000%, exempt 87%, +3.9pp
+shock tms("Metals","ZAF","USA") =  14.9976 ; ! base  0.016%, exempt 50%, +15.0pp
+shock tms("Auto","ZAF","USA") =  30.0000 ; ! base  0.000%, exempt 0%, +30.0pp
+shock tms("MachEquip","ZAF","USA") =  27.6000 ; ! base  0.000%, exempt 8%, +27.6pp
+shock tms("ChemPlast","ZAF","USA") =  23.9634 ; ! base  0.153%, exempt 20%, +24.0pp
+shock tms("TexApp","ZAF","USA") =  29.2175 ; ! base  2.678%, exempt 0%, +30.0pp
+shock tms("OthManuf","ZAF","USA") =  28.4999 ; ! base  0.000%, exempt 5%, +28.5pp
+
+!======================================================================
+! USA reciprocal tariff on third countries
+!======================================================================
+! Applied in addition to existing MFN rates.
+! Energy products and critical minerals exempt for all partners.
+!======================================================================
+
+! --- imports from CHN: +30 percentage points
+shock tms("GrainCrop","CHN","USA") =  29.6184 ; ! base  1.288%
+shock tms("LiveMeat","CHN","USA") =  29.8754 ; ! base  0.417%
+shock tms("OthAgFood","CHN","USA") =  29.1304 ; ! base  2.985%
+! shock tms("Coal","CHN","USA") = 0; ! exempt
+! shock tms("Mining","CHN","USA") = 0; ! exempt
+shock tms("Metals","CHN","USA") =  28.8253 ; ! base  4.075%
+shock tms("Auto","CHN","USA") =  29.6670 ; ! base  1.123%
+shock tms("MachEquip","CHN","USA") =  29.7505 ; ! base  0.839%
+shock tms("ChemPlast","CHN","USA") =  29.0244 ; ! base  3.361%
+shock tms("TexApp","CHN","USA") =  26.9935 ; ! base 11.138%
+shock tms("OthManuf","CHN","USA") =  29.4151 ; ! base  1.989%
+
+! --- imports from EU27: +15 percentage points
+shock tms("GrainCrop","EU27","USA") =   9.7674 ; ! base 53.572%
+shock tms("LiveMeat","EU27","USA") =  14.9023 ; ! base  0.656%
+shock tms("OthAgFood","EU27","USA") =  14.5559 ; ! base  3.051%
+! shock tms("Coal","EU27","USA") = 0; ! exempt
+! shock tms("Mining","EU27","USA") = 0; ! exempt
+shock tms("Metals","EU27","USA") =  14.7075 ; ! base  1.989%
+shock tms("Auto","EU27","USA") =  14.7032 ; ! base  2.019%
+shock tms("MachEquip","EU27","USA") =  14.8921 ; ! base  0.725%
+shock tms("ChemPlast","EU27","USA") =  14.7636 ; ! base  1.601%
+shock tms("TexApp","EU27","USA") =  13.9082 ; ! base  7.850%
+shock tms("OthManuf","EU27","USA") =  14.7651 ; ! base  1.591%
+
+! --- imports from GBR: +10 percentage points
+shock tms("GrainCrop","GBR","USA") =   5.9018 ; ! base 69.440%
+shock tms("LiveMeat","GBR","USA") =   9.9825 ; ! base  0.175%
+shock tms("OthAgFood","GBR","USA") =   9.8715 ; ! base  1.302%
+! shock tms("Coal","GBR","USA") = 0; ! exempt
+! shock tms("Mining","GBR","USA") = 0; ! exempt
+shock tms("Metals","GBR","USA") =   9.8657 ; ! base  1.361%
+shock tms("Auto","GBR","USA") =   9.8097 ; ! base  1.940%
+shock tms("MachEquip","GBR","USA") =   9.9454 ; ! base  0.549%
+shock tms("ChemPlast","GBR","USA") =   9.8465 ; ! base  1.559%
+shock tms("TexApp","GBR","USA") =   9.3158 ; ! base  7.344%
+shock tms("OthManuf","GBR","USA") =   9.8813 ; ! base  1.201%
+
+! --- imports from SACUSADC: +15 percentage points
+shock tms("GrainCrop","SACUSADC","USA") =  15.0000 ; ! base  0.000%
+shock tms("LiveMeat","SACUSADC","USA") =  15.0000 ; ! base  0.000%
+shock tms("OthAgFood","SACUSADC","USA") =  12.7312 ; ! base 17.821%
+! shock tms("Coal","SACUSADC","USA") = 0; ! exempt
+! shock tms("Mining","SACUSADC","USA") = 0; ! exempt
+shock tms("Metals","SACUSADC","USA") =  14.9901 ; ! base  0.066%
+shock tms("Auto","SACUSADC","USA") =  15.0000 ; ! base  0.000%
+shock tms("MachEquip","SACUSADC","USA") =  14.9999 ; ! base  0.001%
+shock tms("ChemPlast","SACUSADC","USA") =  14.9946 ; ! base  0.036%
+shock tms("TexApp","SACUSADC","USA") =  14.9964 ; ! base  0.024%
+shock tms("OthManuf","SACUSADC","USA") =  14.9905 ; ! base  0.064%
+
+! --- imports from ROW: +15 percentage points
+shock tms("GrainCrop","ROW","USA") =  14.9380 ; ! base  0.415%
+shock tms("LiveMeat","ROW","USA") =  14.9078 ; ! base  0.618%
+shock tms("OthAgFood","ROW","USA") =  14.6926 ; ! base  2.092%
+! shock tms("Coal","ROW","USA") = 0; ! exempt
+! shock tms("Mining","ROW","USA") = 0; ! exempt
+shock tms("Metals","ROW","USA") =  14.9406 ; ! base  0.398%
+shock tms("Auto","ROW","USA") =  14.8812 ; ! base  0.798%
+shock tms("MachEquip","ROW","USA") =  14.9584 ; ! base  0.278%
+shock tms("ChemPlast","ROW","USA") =  14.8746 ; ! base  0.843%
+shock tms("TexApp","ROW","USA") =  13.8670 ; ! base  8.170%
+shock tms("OthManuf","ROW","USA") =  14.8861 ; ! base  0.765%

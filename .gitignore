@@ -1,0 +1,14 @@
+# never commit licensed or proprietary material
+*.har
+!data/*.csv
+*.exe
+*.sol
+*.sl4
+*.slc
+*.sli
+*.ud8
+*.ud9
+*.tab
+*.axs
+*.axt
+~$*

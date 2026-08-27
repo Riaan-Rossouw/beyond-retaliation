@@ -1,0 +1,87 @@
+! Scenario 3: retaliation phase 1. Period 2026.
+
+!======================================================================
+! Retaliatory tariffs on USA goods -- phase 1 of 2
+!======================================================================
+! Additional percentage points over the existing applied rate
+! (Table 7).  Phased in two equal steps across 2026-2027.
+! Each step is an equal proportional change in the tariff power.
+!======================================================================
+
+! --- CHN on USA goods: +32pp in total
+shock tms("GrainCrop","USA","CHN") =  14.2934 ; ! base  4.473%
+shock tms("LiveMeat","USA","CHN") =  13.7263 ; ! base  9.078%
+shock tms("OthAgFood","USA","CHN") =  13.4810 ; ! base 11.191%
+shock tms("Coal","USA","CHN") =  14.2884 ; ! base  4.512%
+shock tms("Mining","USA","CHN") =  14.8651 ; ! base  0.188%
+shock tms("Metals","USA","CHN") =  14.4258 ; ! base  3.451%
+shock tms("Auto","USA","CHN") =  12.2532 ; ! base 23.040%
+shock tms("MachEquip","USA","CHN") =  14.3748 ; ! base  3.842%
+shock tms("ChemPlast","USA","CHN") =  14.0122 ; ! base  6.710%
+shock tms("TexApp","USA","CHN") =  13.7169 ; ! base  9.158%
+shock tms("OthManuf","USA","CHN") =  14.4394 ; ! base  3.347%
+
+! --- EU27 on USA goods: +20pp in total
+shock tms("GrainCrop","USA","EU27") =   9.4188 ; ! base  1.395%
+shock tms("LiveMeat","USA","EU27") =   8.6674 ; ! base 10.582%
+shock tms("OthAgFood","USA","EU27") =   8.8614 ; ! base  8.061%
+shock tms("Coal","USA","EU27") =   9.5445 ; ! base  0.000%
+shock tms("Mining","USA","EU27") =   9.5441 ; ! base  0.005%
+shock tms("Metals","USA","EU27") =   9.3619 ; ! base  2.040%
+shock tms("Auto","USA","EU27") =   8.8705 ; ! base  7.946%
+shock tms("MachEquip","USA","EU27") =   9.4538 ; ! base  1.003%
+shock tms("ChemPlast","USA","EU27") =   9.3325 ; ! base  2.376%
+shock tms("TexApp","USA","EU27") =   9.0146 ; ! base  6.147%
+shock tms("OthManuf","USA","EU27") =   9.4040 ; ! base  1.562%
+
+! --- GBR on USA goods: +20pp in total
+shock tms("GrainCrop","USA","GBR") =   9.2468 ; ! base  3.367%
+shock tms("LiveMeat","USA","GBR") =   9.4618 ; ! base  0.914%
+shock tms("OthAgFood","USA","GBR") =   8.9477 ; ! base  6.974%
+shock tms("Coal","USA","GBR") =   9.5445 ; ! base  0.000%
+shock tms("Mining","USA","GBR") =   9.5443 ; ! base  0.002%
+shock tms("Metals","USA","GBR") =   9.4820 ; ! base  0.689%
+shock tms("Auto","USA","GBR") =   9.1862 ; ! base  4.078%
+shock tms("MachEquip","USA","GBR") =   9.4306 ; ! base  1.263%
+shock tms("ChemPlast","USA","GBR") =   9.3434 ; ! base  2.250%
+shock tms("TexApp","USA","GBR") =   8.8719 ; ! base  7.928%
+shock tms("OthManuf","USA","GBR") =   9.4395 ; ! base  1.163%
+
+! --- ZAF on USA goods: +10pp in total
+shock tms("GrainCrop","USA","ZAF") =   4.7519 ; ! base  2.779%
+shock tms("LiveMeat","USA","ZAF") =   4.3574 ; ! base 12.302%
+shock tms("OthAgFood","USA","ZAF") =   4.5930 ; ! base  6.418%
+shock tms("Coal","USA","ZAF") =   4.8809 ; ! base  0.000%
+shock tms("Mining","USA","ZAF") =   4.8799 ; ! base  0.021%
+shock tms("Metals","USA","ZAF") =   4.7586 ; ! base  2.632%
+shock tms("Auto","USA","ZAF") =   4.2007 ; ! base 16.579%
+shock tms("MachEquip","USA","ZAF") =   4.7919 ; ! base  1.901%
+shock tms("ChemPlast","USA","ZAF") =   4.6971 ; ! base  4.005%
+shock tms("TexApp","USA","ZAF") =   4.1825 ; ! base 17.096%
+shock tms("OthManuf","USA","ZAF") =   4.7266 ; ! base  3.341%
+
+! --- SACUSADC on USA goods: +10pp in total
+shock tms("GrainCrop","USA","SACUSADC") =   4.3216 ; ! base 13.252%
+shock tms("LiveMeat","USA","SACUSADC") =   4.0407 ; ! base 21.290%
+shock tms("OthAgFood","USA","SACUSADC") =   4.4313 ; ! base 10.387%
+shock tms("Coal","USA","SACUSADC") =   4.8809 ; ! base  0.000%
+shock tms("Mining","USA","SACUSADC") =   4.8805 ; ! base  0.007%
+shock tms("Metals","USA","SACUSADC") =   4.6125 ; ! base  5.957%
+shock tms("Auto","USA","SACUSADC") =   4.5074 ; ! base  8.485%
+shock tms("MachEquip","USA","SACUSADC") =   4.7209 ; ! base  3.471%
+shock tms("ChemPlast","USA","SACUSADC") =   4.7032 ; ! base  3.869%
+shock tms("TexApp","USA","SACUSADC") =   4.0893 ; ! base 19.821%
+shock tms("OthManuf","USA","SACUSADC") =   4.6983 ; ! base  3.979%
+
+! --- ROW on USA goods: +10pp in total
+shock tms("GrainCrop","USA","ROW") =   4.6319 ; ! base  5.504%
+shock tms("LiveMeat","USA","ROW") =   4.3772 ; ! base 11.782%
+shock tms("OthAgFood","USA","ROW") =   4.5267 ; ! base  8.011%
+shock tms("Coal","USA","ROW") =   4.8568 ; ! base  0.508%
+shock tms("Mining","USA","ROW") =   4.8638 ; ! base  0.360%
+shock tms("Metals","USA","ROW") =   4.8238 ; ! base  1.212%
+shock tms("Auto","USA","ROW") =   4.7973 ; ! base  1.785%
+shock tms("MachEquip","USA","ROW") =   4.8223 ; ! base  1.245%
+shock tms("ChemPlast","USA","ROW") =   4.8057 ; ! base  1.602%
+shock tms("TexApp","USA","ROW") =   4.7799 ; ! base  2.163%
+shock tms("OthManuf","USA","ROW") =   4.8056 ; ! base  1.603%

@@ -1,0 +1,27 @@
+! Scenario 6: USA tariff shock + South African retaliation ONLY. Period 2026.
+! 2025 uses TTSS25.PSH (identical to Scenario 1).
+
+!======================================================================
+! South African retaliatory tariff on USA goods -- phase 1 of 2
+!======================================================================
+! +10 percentage points on the applied rate, phased half in 2026
+! and half in 2027 (Table 7, ZAF row).
+! 
+! NO third-country tariffs and NO unilateral tariff cut.  Scenario 6
+! differs from Scenario 1 ONLY by South Africa's own retaliation, so
+! Sc6 - Sc1 isolates the effect of retaliating.  This is the clean test
+! of Research Question 1; Scenario 3 cannot answer it because it bundles
+! retaliation with USA tariffs on China, the EU and others.
+!======================================================================
+
+shock tms("GrainCrop","USA","ZAF") =   4.8648 ; !   2.779% ->   7.779%
+shock tms("LiveMeat","USA","ZAF") =   4.4523 ; !  12.302% ->  17.302%
+shock tms("OthAgFood","USA","ZAF") =   4.6985 ; !   6.418% ->  11.418%
+shock tms("Coal","USA","ZAF") =   5.0000 ; !   0.000% ->   5.000%
+shock tms("Mining","USA","ZAF") =   4.9990 ; !   0.021% ->   5.021%
+shock tms("Metals","USA","ZAF") =   4.8718 ; !   2.632% ->   7.632%
+shock tms("Auto","USA","ZAF") =   4.2889 ; !  16.579% ->  21.579%
+shock tms("MachEquip","USA","ZAF") =   4.9067 ; !   1.901% ->   6.901%
+shock tms("ChemPlast","USA","ZAF") =   4.8074 ; !   4.005% ->   9.005%
+shock tms("TexApp","USA","ZAF") =   4.2700 ; !  17.096% ->  22.096%
+shock tms("OthManuf","USA","ZAF") =   4.8383 ; !   3.341% ->   8.341%

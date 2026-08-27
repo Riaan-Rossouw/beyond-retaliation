@@ -1,0 +1,11 @@
+Tariff shock verification
+
+  [OK  ] Sc 1  USA tariff on ZAF goods                          11 cells, 0 bad, worst 0.0000pp
+  [OK  ] Sc 1  no unintended tariff movement                  	0 stray cells
+  [OK  ] Sc 2  SA unilateral 50% tariff cut                     48 cells, 0 bad, worst 0.0002pp
+  [OK  ] Sc 3  USA tariffs on third countries                   55 cells, 0 bad, worst 0.0000pp
+  [OK  ] Sc 3  retaliation on USA goods                         66 cells, 0 bad, worst 0.0002pp
+  [OK  ] Sc 4  netted cut + retaliation (USA source)            11 cells, 0 bad, worst 0.0002pp
+  [OK  ] Sc 6  SA retaliation only                              11 cells, 0 bad, worst 0.0001pp
+
+All checks passed within 0.02 percentage points.
