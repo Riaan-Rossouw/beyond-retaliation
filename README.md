@@ -1,4 +1,4 @@
-# Beyond Retaliation — replication package
+# Beyond Retaliation: replication package
 
 Closure files, shock files and summary results for the simulations reported in
 
