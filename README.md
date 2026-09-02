@@ -9,7 +9,7 @@ Closure files, shock files and summary results for the simulations reported in
 **Database:** GTAP 11, 2017 reference year, aggregated to **16 sectors × 7 regions
 × 5 factors** using `Aggregation/gtp15_7.agg`.
 
-Neither the GDyn model source nor the GTAP 11 database is redistributed here —
+Neither the GDyn model source nor the GTAP 11 database is redistributed here,
 both are licensed separately. See [Obtaining the model and data](#obtaining-the-model-and-data).
 
 ---
@@ -62,10 +62,7 @@ illusory employment gain as the real wage falls automatically.
 
 **The real exchange rate uses `dpsave ↔ DTBALR`**, the standard current-account
 closure: the trade balance is exogenous and the depreciation is the model's
-endogenous response. An earlier version used `incomeslack ↔ pfactor`, which hits
-the target by letting the regional income equation fail to balance — and because
-equivalent variation is computed from regional income, that contaminates every
-welfare figure. `incomeslack(ZAF)` is **0.0000 in all six scenarios** here.
+endogenous response.
 
 ## Three things that are easy to get wrong
 
@@ -103,7 +100,7 @@ The depreciation is not imposed. It is calibrated from a single-year probe:
 Scenario 1 costs 0.478% of real exports, 0.200% of real GDP and US$803m of
 welfare; restoring each requires 0.069%, 0.044% and 0.051% respectively. The
 shock is set to `0.00030` per year over 2026–2030, and the five-year cumulative
-response delivers **0.60%** — comfortably above the offset requirement and an
+response delivers **0.60%**, comfortably above the offset requirement and an
 order of magnitude below the 15% assumed in earlier drafts.
 
 A 15% depreciation is not attainable: it would require the trade balance to move
